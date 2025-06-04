@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailActivity">
+
+    <ImageView
+        android:id="@+id/posterImageView"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"/>
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Movie Title"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginTop="16dp"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plot"
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/plotTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="description"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:textAlignment="center"/>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="48dp"
+                android:layout_marginStart="48dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More information"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"/>
+
+            <!-- Director -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:text="Director:"/>
+
+                <TextView
+                    android:id="@+id/directorTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="name"
+                    android:layout_marginStart="2dp"/>
+
+            </LinearLayout>
+
+            <!-- Year -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Year:"/>
+
+                <TextView
+                    android:id="@+id/yearTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="date"
+                    android:layout_marginStart="2dp"/>
+
+            </LinearLayout>
+
+            <!-- Runtime -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Runtime:"/>
+
+                <TextView
+                    android:id="@+id/runtimeTextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="minutes"
+                    android:layout_marginStart="2dp"/>
+
+            </LinearLayout>
+
+            <!-- Genre -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:text="Genre:"/>
+
+                <TextView
+                    android:id="@+id/genreTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="name"
+                    android:layout_marginStart="2dp"/>
+
+            </LinearLayout>
+
+            <!-- Country -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:text="Country:"/>
+
+                <TextView
+                    android:id="@+id/countryTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="country"
+                    android:layout_marginStart="2dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
